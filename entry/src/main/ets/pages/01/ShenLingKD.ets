@@ -22,11 +22,9 @@ struct ShenLingKD {
       }
 
       Row() {
-        Text('神领快递').fontSize(30).margin({
-          top: 15
-        }).fontWeight(700)
+        Text('神领快递').fontSize(30).fontWeight(700)
       }.margin({
-        top: 20
+        top: 35
       })
 
       Row() {
