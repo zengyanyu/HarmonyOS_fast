@@ -12,6 +12,10 @@
     "pages/01/ExtendCase",
     "pages/Article",
     "pages/01/Response08_01",
-    "pages/01/ShenLingKD"
+    "pages/01/ShenLingKD",
+    "pages/components/MeituanHeader",
+    "pages/components/MeituanMain",
+    "pages/components/MeituanFooter",
+    "pages/MeituanAppCase"
   ]
 }
