@@ -71,8 +71,11 @@ struct ShenLingKD {
             .fontColor('#000')
             .border({
               width: {
-                left: 1
+                left: 0.5
               }
+            })
+            .padding({
+              left: 15
             })
             .layoutWeight(1)
         }

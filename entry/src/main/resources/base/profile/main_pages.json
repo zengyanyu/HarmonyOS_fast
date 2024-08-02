@@ -16,6 +16,17 @@
     "pages/components/MeituanHeader",
     "pages/components/MeituanMain",
     "pages/components/MeituanFooter",
-    "pages/MeituanAppCase"
+    "pages/MeituanAppCase",
+    "pages/01/StateSyltesCase",
+    "pages/01/ConditionCase",
+    "pages/01/LoadingCase",
+    "pages/01/LoginPage",
+    "pages/02/BaiduLayout",
+    "pages/02/ColumnLayout",
+    "pages/02/RowLayout",
+    "pages/02/FlexLayout",
+    "pages/02/GridLayout",
+    "pages/02/ScrollLayout",
+    "pages/02/DoubleBind"
   ]
 }
