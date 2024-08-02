@@ -27,6 +27,8 @@
     "pages/02/FlexLayout",
     "pages/02/GridLayout",
     "pages/02/ScrollLayout",
-    "pages/02/DoubleBind"
+    "pages/02/DoubleBind",
+    "pages/02/MarkFriendsCase",
+    "pages/02/HmProgramListCase"
   ]
 }

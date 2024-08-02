@@ -1,3 +1,5 @@
+import { text } from '@kit.ArkGraphics2D';
+
 @Entry
 @Component
 struct DoubleBind {
@@ -85,8 +87,5 @@ struct TabsCase {
 
     }.height(200)
     .backgroundColor(Color.Pink)
-    // .onChange(index => {
-    //   this.currentIndex = index;
-    // })
   }
 }
