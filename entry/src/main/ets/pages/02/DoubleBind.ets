@@ -1,5 +1,3 @@
-import { text } from '@kit.ArkGraphics2D';
-
 @Entry
 @Component
 struct DoubleBind {
@@ -7,6 +5,8 @@ struct DoubleBind {
     Grid() {
       TextInputCase();
       CheckBoxCase();
+      RadioCase();
+      // 跟TabsCase里面的东西有关，方法在TabsCase之前调用就可以；
       TabsCase();
     }
     .margin(10)
@@ -17,9 +17,51 @@ struct DoubleBind {
   }
 }
 
-// 双向绑定
+@Component
+struct RadioCase {
+  @State selectedFlag: boolean = false
+
+  build() {
+    GridItem() {
+      Column({ space: 10 }) {
+        Radio({
+          value: 'false',
+          group: 'group'
+        }).checked(this.selectedFlag)
+        Radio({
+          value: 'false',
+          group: 'group',
+        }).checked(this.selectedFlag)
+      }
+      .justifyContent(FlexAlign.Center)
+      .height(200).width('100%')
+      .backgroundColor(Color.Pink)
+    }
+  }
+}
+
 @Component
 struct TextInputCase {
+  @State inputValue: string = '老高'
+
+  build() {
+    GridItem() {
+      Column({ space: 10 }) {
+        TextInput({
+          text: $$this.inputValue
+        })
+        Text(this.inputValue)
+      }
+      .justifyContent(FlexAlign.Center)
+      .height(200)
+      .backgroundColor(Color.Pink)
+    }
+  }
+}
+
+
+@Component
+struct TextInputCase1 {
   @State inputValue: string = '老高'
 
   build() {

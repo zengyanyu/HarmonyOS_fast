@@ -25,15 +25,29 @@ struct MarkFriendsCase {
         }.width('33%').height(60)
         .justifyContent(FlexAlign.Start)
 
-        Row() {
+        Row({ space: 20 }) {
           // Text("发现").margin({
           //   right: 15
           // })
           // Text("附近")
-          Tabs() {
-            TabContent().tabBar('发现')
-            TabContent().tabBar('附近')
-          }
+          // Tabs() {
+          //   TabContent().tabBar('发现')
+          //   TabContent().tabBar('附近')
+          // }
+          Text("发现").fontSize(20)
+            .fontWeight(700)
+            .border({
+              color: '#8468d7',
+              width: {
+                bottom: 4
+              }
+            }).padding({
+            bottom: 3
+          })
+          Text("附近").fontSize(20)
+            .padding({
+              bottom: 3
+            })
         }.width('33%').height(60)
         .justifyContent(FlexAlign.Center)
 
@@ -54,9 +68,42 @@ struct MarkFriendsCase {
           .width('100%')
           .height(400).borderRadius(10)
 
-        Image($r('app.media.ai')).width(30).zIndex(2).translate({
-          x: 130,
-          y: -40
+        Row() {
+          Column({ space: 10 }) {
+            Text("西瓜")
+              .fontSize(20)
+              .fontColor(Color.White)
+              .fontWeight(700) // 加粗
+            Text("3.4km.互联网.巨蟹座").fontColor(Color.White)
+
+            Text() {
+              ImageSpan($r("sys.media.ohos_ic_public_play"))
+                .width(20)
+              ImageSpan($r("sys.media.ohos_ic_public_sound"))
+                .width(20)
+                .margin({
+                  left: 10
+                })
+              Span("6'")
+                .fontColor(Color.White)
+                .margin({
+                  left: 10
+                })
+            }
+          }.alignItems(HorizontalAlign.Start)
+
+          // 右下角图标
+          Image($r('app.media.ai')).width(30).zIndex(2).translate({
+            x: 130,
+            y: 40
+          })
+
+
+        }
+        .margin({
+          top: -120,
+          bottom: 40,
+          left: -150
         })
       }
 
@@ -81,7 +128,7 @@ struct MarkFriendsCase {
           .borderRadius(8)
 
           GridItem() {
-            Row(){
+            Row() {
               Column({ space: 4 }) {
                 Text('灵魂匹配')
                 Text('和懂你的人聊天')
