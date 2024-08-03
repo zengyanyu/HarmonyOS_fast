@@ -30,6 +30,11 @@
     "pages/02/DoubleBind",
     "pages/02/MarkFriendsCase",
     "pages/02/HmProgramListCase",
-    "pages/02/Discover"
+    "pages/02/Discover",
+    "pages/03/LinearGrantCase",
+    "pages/03/StackCase",
+    "pages/03/LoginCase",
+    "pages/03/ShanChongMainCase",
+    "pages/03/RouterManageCase"
   ]
 }

@@ -95,13 +95,11 @@ struct MarkFriendsCase {
           // 右下角图标
           Image($r('app.media.ai')).width(30).zIndex(2).translate({
             x: 130,
-            y: 40
+            y: 30
           })
-
-
         }
         .margin({
-          top: -120,
+          top: -100,
           bottom: 40,
           left: -150
         })
@@ -123,7 +121,7 @@ struct MarkFriendsCase {
                 Image($r('app.media.ai')).width(30)
               }
             }
-          }.backgroundColor(Color.Blue)
+          }.backgroundColor(Color.Orange)
           .height(80)
           .borderRadius(8)
 
@@ -139,7 +137,6 @@ struct MarkFriendsCase {
                 Image($r('app.media.ai')).width(30)
               }
             }
-
           }.backgroundColor(Color.Pink)
 
 
