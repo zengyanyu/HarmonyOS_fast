@@ -6,7 +6,6 @@ struct ZhiHuCase {
       NarBar();
       ContentItem();
     }
-
   }
 }
 
@@ -14,17 +13,15 @@ struct ZhiHuCase {
 struct NarBar {
   build() {
     Row() {
-      Row() {
-        Image($r('app.media.left_nav'))
-          .fillColor('#848484')
-      }
-      .backgroundColor('#f5f5f5')
-      .borderRadius(12)
-      .width(24)
-      .aspectRatio(1)
-      .margin({
-        left: 15
-      })
+      Image($r('app.media.left_nav'))
+        .fillColor('#848484')
+        .backgroundColor('#f5f5f5')
+        .borderRadius(12)
+        .width(24)
+        .aspectRatio(1)
+        .margin({
+          left: 15
+        })
 
       Text("评论回复")
         .textAlign(TextAlign.Center)

@@ -5,7 +5,6 @@ import { router } from '@kit.ArkUI';
 @Component
 struct RouterManageCase {
   @State message: string = 'Hello World';
-
   list: RouterManage[] = [{
     name: '闪充—管理页面',
     url: 'pages/03/ShanChongMainCase'
@@ -19,6 +18,9 @@ struct RouterManageCase {
     // 注意：写url的时候，最前面加/可以有提示，页面地址写完之后，记得把最前面的/删除
     name: '渐变色-管理页面',
     url: 'pages/03/LinearGrantCase'
+  }, {
+    name: '知乎列表',
+    url: 'pages/04/Zhihu/ZhihuDemo'
   }]
 
   build() {

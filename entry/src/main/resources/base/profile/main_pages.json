@@ -36,6 +36,8 @@
     "pages/03/LoginCase",
     "pages/03/ShanChongMainCase",
     "pages/03/RouterManageCase",
-    "pages/03/Demo"
+    "pages/03/Demo",
+    "pages/04/WechatDemo",
+    "pages/04/Zhihu/ZhihuDemo"
   ]
 }
