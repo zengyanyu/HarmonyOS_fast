@@ -60,7 +60,8 @@ struct ShanChongMainCase {
                       .backgroundColor('blue')
                       .width(50)
                       .onClick(() => {
-                        promptAction.showToast({ message: '删除成功' })
+                        // promptAction.showToast({ message: '删除成功' })
+                        
                       })
 
                     Text("空闲6")

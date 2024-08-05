@@ -35,6 +35,7 @@
     "pages/03/StackCase",
     "pages/03/LoginCase",
     "pages/03/ShanChongMainCase",
-    "pages/03/RouterManageCase"
+    "pages/03/RouterManageCase",
+    "pages/03/Demo"
   ]
 }
