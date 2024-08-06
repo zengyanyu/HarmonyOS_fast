@@ -38,6 +38,10 @@
     "pages/03/RouterManageCase",
     "pages/03/Demo",
     "pages/04/WechatDemo",
-    "pages/04/Zhihu/ZhihuDemo"
+    "pages/04/Zhihu/ZhihuDemo",
+    "pages/05/GoodWaterFlowCase",
+    "pages/05/BuilderTransCase",
+    "pages/05/LinkCase",
+    "pages/05/BaseInfoCase"
   ]
 }

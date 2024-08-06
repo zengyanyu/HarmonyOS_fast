@@ -256,9 +256,9 @@ struct ConnectTab {
         .width('100%')
         .height(60)
         .backgroundColor('#f6f6f6')
-        .margin({
-          top: 20
-        })
+        // .margin({
+        //   // top: 20
+        // })
         .padding({
           top: 20,
           bottom: 20,
