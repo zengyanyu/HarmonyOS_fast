@@ -75,6 +75,10 @@ struct WeChat {
         .width("100%")
         .height(60)
       }
+      .padding({
+        left: 10,
+        right: 10
+      })
 
       Row() {
         Stack() {
@@ -87,15 +91,22 @@ struct WeChat {
 
           TextInput({
             placeholder: '搜索'
-          }).type(InputType.Normal).height(60)
+          })
+            .type(InputType.Normal)
+            .height(40)
             .padding({
               left: 50
             })
             .fontSize(20)
+            .backgroundColor('#f6f6f6')
         }
       }.width('100%').height(60)
       .margin({
         bottom: 10
+      })
+      .padding({
+        left: 10,
+        right: 10
       })
 
       // TextInput({
@@ -108,10 +119,12 @@ struct WeChat {
 
       Row({ space: 10 }) {
         // Image($r('app.media.ic_public_contacts_group'))
+        // 微信-个人头像
         Image($r('app.media.a2bc03ff4929803bb1f18c175dc5b9d6'))
-          .width(100)
+          .width(70).aspectRatio(1)
           .borderRadius(5)
-        Column({ space: 20 }) {
+
+        Column({ space: 10 }) {
           Row() {
             Text('老板').fontWeight(FontWeight.Bold)
             Text('09：57')
@@ -121,15 +134,24 @@ struct WeChat {
           Text('你是猪吗？')
             .width('100%')
         }.layoutWeight(1)
-        .margin({
-          top: 30
-        })
       }.width('100%')
       .height(100)
-    }.width('100%')
+      .backgroundColor('#f6f6f6')
+      // 内边距
+      .padding({
+        left: 20,
+        right: 20,
+        top: 10,
+        bottom: 10
+      })
+    }
+    .width('100%')
     .height('100%')
-    // .backgroundColor('#ccc')
-    .padding(20)
+    .backgroundColor('#e8e8e8')
+    .padding({
+      top: 20,
+      bottom: 20
+    })
   }
 }
 
@@ -184,6 +206,7 @@ struct ConnectTab {
     Column() {
       Row() {
         Stack() {
+          // zIndex(2)作用是防止事件失效，放在上面一层
           Image($r('app.media.search')).width(20).zIndex(2)// 偏移
             .translate({
               x: -130,
@@ -192,21 +215,32 @@ struct ConnectTab {
 
           TextInput({
             placeholder: '搜索'
-          }).type(InputType.Normal).height(60)
+          })
+            .type(InputType.Normal)
+            .height(40)
             .padding({
               left: 50
             })
             .fontSize(20)
+            .backgroundColor('#f6f6f6')
         }
       }.width('100%').height(60)
+      .padding(10)
+
+      // .margin({
+      //   bottom: 10
+      // })
 
       ForEach(this.connects, (item: Connects, index: number) => {
         Row({ space: 20 }) {
+          // 联系人-头像
           Image(item.avatar)
             .width(40)
             .aspectRatio(1)
             .borderRadius(5)
+
           Row() {
+            // 联系人-名称
             Text(item.username)
           }.layoutWeight(1)
           .width('100%')
@@ -218,16 +252,25 @@ struct ConnectTab {
             }
           })
 
-        }.width('100%')
+        }
+        .width('100%')
         .height(60)
+        .backgroundColor('#f6f6f6')
         .margin({
           top: 20
+        })
+        .padding({
+          top: 20,
+          bottom: 20,
+          left: 10,
+          right: 10
         })
       })
     }.width('100%')
     .height('100%')
-    // .backgroundColor(Color.Red)
-    .padding(20)
+    .backgroundColor('#e9e9e9')
+
+    // .padding(20)
   }
 }
 
