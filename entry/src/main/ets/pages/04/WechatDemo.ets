@@ -65,10 +65,10 @@ struct WeChat {
   build() {
     Column() {
       Stack({ alignContent: Alignment.Top }) {
-        Text('微信(1)').fontSize(30)
+        Text('微信(1)').fontSize(30).fontWeight(700)
 
         Column() {
-          Image($r('app.media.ic_gallery_discover_filled'))
+          Image($r('app.media.add'))
             .width(30).aspectRatio(1)
         }
         .alignItems(HorizontalAlign.End)
@@ -76,17 +76,41 @@ struct WeChat {
         .height(60)
       }
 
-      TextInput({
-        placeholder: '搜索'
-      }).type(InputType.Normal).height(60)
-        .padding({
-          left: 20
-        })
-        .fontSize(20)
-
       Row() {
-        Image($r('app.media.ic_public_contacts_group'))
+        Stack() {
+          // zIndex(2)作用是防止事件失效，放在上面一层
+          Image($r('app.media.search')).width(20).zIndex(2)// 偏移
+            .translate({
+              x: -130,
+              y: 0
+            })
+
+          TextInput({
+            placeholder: '搜索'
+          }).type(InputType.Normal).height(60)
+            .padding({
+              left: 50
+            })
+            .fontSize(20)
+        }
+      }.width('100%').height(60)
+      .margin({
+        bottom: 10
+      })
+
+      // TextInput({
+      //   placeholder: '搜索'
+      // }).type(InputType.Normal).height(60)
+      //   .padding({
+      //     left: 20
+      //   })
+      //   .fontSize(20)
+
+      Row({ space: 10 }) {
+        // Image($r('app.media.ic_public_contacts_group'))
+        Image($r('app.media.a2bc03ff4929803bb1f18c175dc5b9d6'))
           .width(100)
+          .borderRadius(5)
         Column({ space: 20 }) {
           Row() {
             Text('老板').fontWeight(FontWeight.Bold)
@@ -158,13 +182,24 @@ struct ConnectTab {
 
   build() {
     Column() {
-      TextInput({
-        placeholder: '搜索'
-      }).type(InputType.Normal).height(60)
-        .padding({
-          left: 20
-        })
-        .fontSize(20)
+      Row() {
+        Stack() {
+          Image($r('app.media.search')).width(20).zIndex(2)// 偏移
+            .translate({
+              x: -130,
+              y: 0
+            })
+
+          TextInput({
+            placeholder: '搜索'
+          }).type(InputType.Normal).height(60)
+            .padding({
+              left: 50
+            })
+            .fontSize(20)
+        }
+      }.width('100%').height(60)
+
       ForEach(this.connects, (item: Connects, index: number) => {
         Row({ space: 20 }) {
           Image(item.avatar)
