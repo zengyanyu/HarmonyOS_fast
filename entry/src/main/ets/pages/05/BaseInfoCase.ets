@@ -22,16 +22,21 @@ struct BaseInfoCase {
           })
       }
       .width('100%')
-      .height(60)
+      .height(40)
       .backgroundColor(Color.White)
       .justifyContent(FlexAlign.SpaceBetween)
 
-      Column({ space: 20 }) {
+      // .backgroundColor(Color.Red)
+
+      Column() {
         Row({ space: 10 }) {
-          Text('起').fontColor(Color.White)
-            .backgroundColor(Color.Black)
-            .fontSize(20)
-            .borderRadius(10)
+          Row() {
+            Text('起').fontColor(Color.White)
+              .fontSize(12)
+              .width('100%').textAlign(TextAlign.Center)
+          }.width(20).aspectRatio(1)
+          .borderRadius(10).backgroundColor(Color.Black)
+
           Text("厦门市集美区锦英南二里").layoutWeight(1)
             .fontSize(14)
             .fontColor('#9f9f9f')
@@ -39,14 +44,32 @@ struct BaseInfoCase {
         // .backgroundColor(Color.Green)
         .justifyContent(FlexAlign.SpaceBetween)
 
-        // .opacity(this.showInfo ? 1 : 0)
+        Row() {
+        }
+        .border({
+          color: '#9f9f9f',
+          width: {
+            left: 1
+          }
+        })
+        // 偏移
+        .translate({
+          x: 10,
+          // y: -2
+        })
+        .borderStyle(BorderStyle.Dashed)
+        .width('100%')
+        .height(20)
 
 
         Row({ space: 10 }) {
-          Text('止').fontColor(Color.White)
-            .backgroundColor(Color.Red)
-            .fontSize(20)
-            .borderRadius(10)
+          Row() {
+            Text('止').fontColor(Color.White)
+              .fontSize(12)
+              .width('100%').textAlign(TextAlign.Center)
+          }.width(20).aspectRatio(1)
+          .borderRadius(10).backgroundColor(Color.Red)
+
           Text("厦门市集美区锦英南二里").layoutWeight(1)
             .fontSize(14)
             .fontColor('#9f9f9f')
@@ -55,6 +78,10 @@ struct BaseInfoCase {
         .justifyContent(FlexAlign.SpaceBetween)
 
         Divider().strokeWidth(1)
+          .margin({
+            top: 20,
+            bottom: 20
+          })
 
         // 调用本this中的函数
         this.getCardItem('任务编号', '111112222233333');
@@ -74,7 +101,6 @@ struct BaseInfoCase {
         x: this.showInfo ? 1 : 0,
         y: this.showInfo ? 1 : 0
       })
-
     }
     .width('100%')
     .backgroundColor(Color.White)
