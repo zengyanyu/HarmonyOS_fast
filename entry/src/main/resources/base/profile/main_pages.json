@@ -42,6 +42,12 @@
     "pages/05/GoodWaterFlowCase",
     "pages/05/BuilderTransCase",
     "pages/05/LinkCase",
-    "pages/05/BaseInfoCase"
+    "pages/05/BaseInfoCase",
+    "pages/06/AppStorageCaseLogin",
+    "pages/06/AppStorageCaseMain",
+    "pages/06/LocalStorageCase",
+    "pages/06/ObservedCase",
+    "pages/06/Splash",
+    "pages/06/MainStructCase"
   ]
 }

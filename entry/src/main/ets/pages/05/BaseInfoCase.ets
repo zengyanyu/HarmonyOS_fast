@@ -98,8 +98,6 @@ struct BaseInfoCase {
         }
       }
 
-      // Text("xxxxxxxxxxxxxxxxxxxxxxx")
-
       // 缩放
       // .scale({
       //   x: this.showInfo ? 1 : 0,
@@ -140,7 +138,7 @@ struct BaseInfoCase {
       Text(leftTitle)
         .fontColor('#c6c6c6')
 
-      Row() {
+      Row({ space: 10 }) {
         Text(rightValue)
           .fontSize(14)
           .fontColor('#707070')
