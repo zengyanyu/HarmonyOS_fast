@@ -1,5 +1,7 @@
 import { UserInfo, UserInfoModel } from './AppStorageCaseLogin'
 
+PersistentStorage
+
 @Entry
 @Component
 struct AppStorageCaseMain {

@@ -1,6 +1,6 @@
 @Entry
 @Component
-struct StateSyltesCase {
+struct StateStylesDemo {
   @State textEnable: boolean = true;
 
   @Styles

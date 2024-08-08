@@ -13,11 +13,7 @@
     "pages/Article",
     "pages/01/Response08_01",
     "pages/01/ShenLingKD",
-    "pages/components/MeituanHeader",
-    "pages/components/MeituanMain",
-    "pages/components/MeituanFooter",
-    "pages/MeituanAppCase",
-    "pages/01/StateSyltesCase",
+    "pages/01/StateStylesDemo",
     "pages/01/ConditionCase",
     "pages/01/LoadingCase",
     "pages/01/LoginPage",
@@ -48,6 +44,8 @@
     "pages/06/LocalStorageCase",
     "pages/06/ObservedCase",
     "pages/06/Splash",
-    "pages/06/MainStructCase"
+    "pages/06/MainStructCase",
+    "pages/07/HttpCase",
+    "pages/MeiTuan/MeiTuanIndex"
   ]
 }

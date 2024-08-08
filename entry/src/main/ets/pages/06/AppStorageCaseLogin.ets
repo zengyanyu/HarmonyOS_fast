@@ -45,6 +45,9 @@ struct AppStorageCaseLogin {
         age: 20,
         avatar: '/pages/05/assets/9.webp'
       }))
+      // 持久化
+      PersistentStorage.persistProp<UserInfoModel>('userInfo', new UserInfoModel({} as UserInfo))
+      console.log("loginInfo_" + JSON.stringify(AppStorage.get("userInfo")));
 
       // 页面跳转
       router.pushUrl({
