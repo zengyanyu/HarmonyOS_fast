@@ -51,6 +51,18 @@ struct HttpCase {
     }, 1000)
   }
 
+  // 判断正则表达式
+  getReg() {
+    const xxx = new RegExp('1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\\d{8}')
+    if (xxx.test(this.mobile)) {
+      promptAction.showToast({ message: '正则表达式正确' })
+      return true
+    } else {
+      promptAction.showToast({ message: '不匹配正则表达式' })
+      return false
+    }
+  }
+
   // 登录操作
   async login() {
     const req = http.createHttp()
@@ -102,6 +114,7 @@ struct HttpCase {
             // 发送验证码
             this.sendCode();
           })
+          .enabled(this.getReg())
       }
       .width('100%')
 
