@@ -17,8 +17,11 @@ export class CartStore {
 
   // 加减购物车
   addCutCart(type: OPERATE_TYPE, food: FoodItem) {
+
     const list = this.getCarts();
     const f = list.find(item => item.id === food.id) // 有可能找到,也有可能找不到
+    console.log("addCutCart_list_" + JSON.stringify(list));
+    console.log("food_" + food);
     // 添加购物车
     if (type === OPERATE_TYPE.ADD) {
       // 加菜逻辑
