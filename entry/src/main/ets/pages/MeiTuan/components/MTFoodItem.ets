@@ -57,7 +57,7 @@ struct MTFoodItem {
           }
 
           // 加和减操作按钮
-          MTAddCut()
+          MTAddCut({ item: this.item })
         }
         .justifyContent(FlexAlign.SpaceBetween)
         .width('100%')
