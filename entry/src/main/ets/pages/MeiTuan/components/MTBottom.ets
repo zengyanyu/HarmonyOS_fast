@@ -1,16 +1,33 @@
 import { promptAction } from '@kit.ArkUI'
+import { FoodItem } from '../viewmodels'
 
 @Component
 struct MTBottom {
   @Consume
   showCart: boolean
+  @Consume
+  userCart: FoodItem[]
+
+  // 总数量
+  getAllCount() {
+    return this.userCart.reduce((prevValue: number, item: FoodItem) => {
+      return prevValue + item.count
+    }, 0)
+  }
+
+  // 总价格
+  getAllPrice() {
+    return this.userCart.reduce((prevValue: number, item: FoodItem) => {
+      return prevValue + item.count * item.price
+    }, 0).toFixed(2)
+  }
 
   build() {
     Row() {
       Row() {
         // 小哥的显示
         Badge({
-          value: '0',
+          value: this.getAllCount().toString(),
           position: BadgePosition.Right,
           style: {
             badgeSize: 18
@@ -38,7 +55,7 @@ struct MTBottom {
             // span imageSpan
             Span("¥")
               .fontSize(12)
-            Span("0.00")
+            Span(this.getAllPrice())
               .fontSize(24)
           }
           .fontColor($r("app.color.white"))
@@ -59,6 +76,11 @@ struct MTBottom {
             topRight: 25,
             bottomRight: 25
           })
+          .onClick(() => {
+            // 去结算
+            promptAction.showToast({ message: '去结算' })
+          })
+
       }
       .height(50)
       .backgroundColor($r("app.color.bottom_back"))

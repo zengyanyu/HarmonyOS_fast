@@ -1,7 +1,6 @@
 import { getAllDataByHttp } from '../api';
 import { Category, FoodItem } from '../viewmodels';
 import MTFoodItem from './MTFoodItem'
-import { promptAction } from '@kit.ArkUI';
 
 @Component
 struct MTMain {

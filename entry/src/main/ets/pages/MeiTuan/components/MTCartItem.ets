@@ -1,13 +1,19 @@
+import { FoodItem } from '../viewmodels'
+import MTAddCut from './MTAddCut'
+
+// 购物车中的每一项数据
 @Component
 struct MTCartItem {
+  item: FoodItem = new FoodItem()
+
   build() {
     Row() {
-      Image('https://img0.baidu.com/it/u=3892505703,266789062&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=750')
+      Image(this.item.picture)
         .width(60)
         .aspectRatio(1)
         .borderRadius(8)
       Column({ space: 5 }) {
-        Text('小份酸汤莜面鱼鱼+肉夹馍套餐')
+        Text(this.item.name)
           .fontSize(14)
           .textOverflow({
             overflow: TextOverflow.Ellipsis
@@ -18,10 +24,12 @@ struct MTCartItem {
             Span('¥ ')
               .fontColor($r("app.color.font_main_color"))
               .fontSize(10)
-            Span('34.23')
+            Span(this.item.price.toString())
               .fontColor($r("app.color.font_main_color"))
               .fontWeight(FontWeight.Bold)
           }
+
+          MTAddCut({ item: this.item })
         }
         .justifyContent(FlexAlign.SpaceBetween)
         .width('100%')

@@ -1,7 +1,13 @@
 import MTCartItem from './MTCartItem'
+import { promptAction } from '@kit.ArkUI'
+import { FoodItem } from '../viewmodels'
+import { store } from '../utils/CartStore'
 
 @Component
 struct MTCart {
+  @Consume
+  userCart: FoodItem[]
+
   build() {
     Column() {
       Column() {
@@ -12,6 +18,10 @@ struct MTCart {
           Text('清空购物车')
             .fontSize(12)
             .fontColor($r("app.color.search_font_color"))
+            .onClick(() => {
+              // 清空购物车
+              store.clearCart()
+            })
         }
         .width('100%')
         .height(40)
@@ -21,11 +31,11 @@ struct MTCart {
         .padding({ left: 15, right: 15 })
 
         List({ space: 30 }) {
-          ForEach([1, 2, 3, 4], () => {
+          ForEach(this.userCart, (item: FoodItem) => {
             ListItem() {
-              MTCartItem()
+              MTCartItem({ item: item })
             }
-          })
+          }, (item: FoodItem, index: number) => `${index}_${item.id}`) //
         }
         .divider({
           strokeWidth: 0.5,

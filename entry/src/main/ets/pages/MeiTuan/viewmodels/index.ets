@@ -18,3 +18,9 @@ export class Category {
   name: string = ""
   foods: FoodItem[] = []
 }
+
+// 操作类型
+export enum OPERATE_TYPE {
+  ADD,
+  CUT
+}

@@ -1,6 +1,6 @@
 import { FoodItem } from '../viewmodels'
+import MTAddCut from './MTAddCut'
 
-@Preview
 @Component
 struct MTFoodItem {
   item: FoodItem = new FoodItem()
@@ -55,6 +55,9 @@ struct MTFoodItem {
               .fontColor($r("app.color.font_main_color"))
               .fontWeight(FontWeight.Bold)
           }
+
+          // 加和减操作按钮
+          MTAddCut()
         }
         .justifyContent(FlexAlign.SpaceBetween)
         .width('100%')
