@@ -46,6 +46,13 @@
     "pages/06/Splash",
     "pages/06/MainStructCase",
     "pages/07/HttpCase",
-    "pages/MeiTuan/MeiTuanIndex"
+    "pages/MeiTuan/MeiTuanIndex",
+    "pages/08/ExpandSateAreaCase",
+    "pages/08/KeyBoardCase",
+    "pages/09/NavigationPathCase",
+    "pages/09/RouterTestCase",
+    "pages/09/RouterB",
+    "pages/09/BackPage",
+    "pages/09/OnBackPressCase"
   ]
 }

@@ -1,13 +1,11 @@
 {
-  "name": "entry",
+  "name": "payhsp",
   "version": "1.0.0",
   "description": "Please describe the basic information.",
-  "main": "",
+  "main": "Index.ets",
   "author": "",
-  "license": "",
+  "license": "Apache-2.0",
+  "packageType": "InterfaceHar",
   "dependencies": {
-    "@ohos/axios": "^2.2.2",
-    "@ohos/pay": "file:../PayHsp"
   }
 }
-

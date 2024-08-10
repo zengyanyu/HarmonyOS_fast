@@ -30,6 +30,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "PayHsp",
+      "srcPath": "./PayHsp",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }
