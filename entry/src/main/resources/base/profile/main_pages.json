@@ -53,6 +53,7 @@
     "pages/09/RouterTestCase",
     "pages/09/RouterB",
     "pages/09/BackPage",
-    "pages/09/OnBackPressCase"
+    "pages/09/OnBackPressCase",
+    "pages/pay/PayPage"
   ]
 }

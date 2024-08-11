@@ -18,6 +18,7 @@ struct WeChatPay {
           .onClick(async () => {
             // 拉起微信支付的Ability
             const context = getContext() as common.UIAbilityContext
+            
             // context.startAbility({
             //   abilityName: 'PayAbility', // 拉起哪个ability
             //   bundleName: 'com.itheima.study', // 哪个包
