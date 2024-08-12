@@ -24,7 +24,7 @@ export default class EntryAbility extends UIAbility {
     const manage = new TokenManager();
     manage.context = this.context; // 保证上下文是有值的
     console.log("login_" + manage.getToken());
-    windowStage.loadContent('pages/09/NavigationPathCase', tokenObj);
+    windowStage.loadContent('pages/10/PageA', tokenObj);
 
     // windowStage.loadContent('pages/01/LoginPage', (err) => {
     //   if (err.code) {

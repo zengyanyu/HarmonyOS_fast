@@ -54,6 +54,15 @@
     "pages/09/RouterB",
     "pages/09/BackPage",
     "pages/09/OnBackPressCase",
-    "pages/pay/PayPage"
+    "pages/pay/PayPage",
+    "pages/10/FileDownloadPage",
+    "pages/10/FileOperateCase",
+    "pages/10/PageA",
+    "pages/10/PageB",
+    "pages/10/GestureCase",
+    "pages/10/AnimateCase",
+    "pages/10/TransAnimateCase",
+    "pages/10/ImageAnimateCase",
+    "pages/10/LastAnimateCase"
   ]
 }
