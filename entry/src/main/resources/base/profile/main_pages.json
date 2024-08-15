@@ -63,6 +63,8 @@
     "pages/10/AnimateCase",
     "pages/10/TransAnimateCase",
     "pages/10/ImageAnimateCase",
-    "pages/10/LastAnimateCase"
+    "pages/10/LastAnimateCase",
+    "pages/10/RelativeContainsCase",
+    "pages/10/RelativeCase"
   ]
 }
